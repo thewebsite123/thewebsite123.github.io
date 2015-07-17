@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+	<head>
+	   <script src="/js/ads.js"></script>
+
+		<link rel="icon" type="image/vnd.microsoft.icon" href=http://www.thewebsite123.net63.net/images/favicon.ico>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-56313406-1', 'auto');
+		  ga('send', 'pageview');
+
+		  if( window.canRunAds === undefined ){
+		    // adblocker detected, show fallback
+		    alert("Hey it looks like you could be using adblock. Please would you mind turning it off for this website. Ads are what keep it free. ");
+		  }
+		</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Clicking Gone Global</title>
+ 	   <link href=/css/Test.css rel="stylesheet">
+	</head>
+	
+	<body>		
+
+		<header>
+			<div class="innertube">
+				<h1>The Website</h1>
+				<ul id='menu'> 
+				<li><a href='http://www.thewebsite123.net63.net/'>Home</a></li>
+				<li><a href='http://www.thewebsite123.net63.net/About'>About</a></li>
+				<li><a href='http://www.thewebsite123.net63.net/Articles'>Articles</a></li>
+				<li><a href='http://www.thewebsite123.net63.net/Other'>Other</a></li>
+				</ul>
+				<link href="http://www.thewebsite123.net63.net/css/Style.css" rel="stylesheet">
+			</div>
+		</header>
+		
+		<div id="wrapper">
+		
+			<main>
+				<div id="content">
+					<div class="innertube">
+					<h1>Global</h1>
+					<br>
+
+
+					<script>
+					var Metal = 0;
+					var Chips = 0;
+					var Plastic = 0;
+					var Batteries = 0;
+					</script>
+
+
+
+
+					<body onload="diablecrafting()">
+					<body onload="Load()">	
+
+					<p>Coal</p>
+					<p id="chips"></p>
+
+					<button id="ImportCoal" onclick="ImportChips()">Import</button>
+					<button id="ExportCoal" onclick="ExportChips()">Export</button>
+
+
+
+
+					<p>Glass</p>
+					<p id="batteries"></p>
+
+					<button id="Batterylicense" onclick="LicenceBatteries()">Buy a Glass Trade License For $500</button>
+					<br>
+					<button id="ImportBatteries" onclick="ImportBatteries()">Import</button>
+					<button id="ExportBatteries" onclick="ExportBatteries()">Export</button>
+
+
+
+					<p>Metal</p>
+					<p id="metal"></p>
+
+					<button id="Metallicense" onclick="LicenceMetal()">Buy a Metal Trade License For $2000</button>
+					<br>
+					<button id="ImportMetal" onclick="ImportMetal()">Import</button>
+					<button id="ExportMetal" onclick="ExportMetal()">Export</button>
+
+
+
+					<p>Plastic</p>
+					<p id="plastic"></p>
+
+					<button id="Plasticlicense" onclick="LicencePlastic()">Buy a Plastic Trade License For $50000</button>
+					<br>
+					<button id="ImportPlastic" onclick="ImportPlastic()">Import</button>
+					<button id="ExportPlastic" onclick="ExportPlastic()">Export</button>
+
+
+
+					<script>
+					var Total = Chips + Batteries + Metal + Plastic;
+					var Craftablility = false;
+					var Batteriable = false;
+					var Metalable = false;
+					var Plasticable = false;
+					</script>
+
+					<script>
+					function getOption() {
+					   var obj = document.getElementById("goodid");
+					    document.getElementById("produce").innerHTML = 
+					    obj.options[obj.selectedIndex].text;
+						return document.getElementById("goodid");
+					    document.getElementById("produce").innerHTML = 
+					    obj.options[obj.selectedIndex].text;
+					}
+					</script>
+
+
+					<script>
+					var Demand = 0;
+					</script>
+
+					<script>
+					document.getElementById("batteries").innerHTML = Batteries;
+					document.getElementById("metal").innerHTML = Metal;
+					document.getElementById("plastic").innerHTML = Plastic;
+					</script>
+
+
+					<script>
+					function diablecrafting() {
+					    document.getElementById("coalshipbuy").disabled = true;
+						document.getElementById("ImportBatteries").disabled = true;
+						document.getElementById("ExportBatteries").disabled = true;
+						document.getElementById("ImportMetal").disabled = true;
+						document.getElementById("ImportPlastic").disabled = true;
+						document.getElementById("ExportPlastic").disabled = true;
+						document.getElementById("ExportMetal").disabled = true;
+						document.getElementById("coalexportbuy").disabled = true;
+						document.getElementById("batteriesexportbuy").disabled = true;
+						document.getElementById("batteriesimportbuy").disabled = true;
+						document.getElementById("demand").innerHTML = Demand;
+						document.getElementById("outship").innerHTML = GlobalShip;
+						document.getElementById("inship").innerHTML =  LocalShip;
+						document.getElementById("batteriesinship").innerHTML =  BatteriesLocalShip;
+						document.getElementById("batteriesoutship").innerHTML =  BatteriesGlobalShip;
+					}
+					</script>
+
+					<script>
+					var BatteriesLocalShip = 0;
+					var BatteriesGlobalShip = 0;
+					</script> 
+
+					<script>
+					function EnableCrafting() {
+						if (Money >= 1000000) {
+					    document.getElementById("coalshipbuy").disabled = false;
+						document.getElementById("coalexportbuy").disabled = false;
+						document.getElementById("batteriesexportbuy").disabled = false;
+						document.getElementById("batteriesimportbuy").disabled = false;
+						document.getElementById("inovate").disabled = true;
+						Money = Money - 1000000;
+						document.getElementById("money").innerHTML = Money
+						Craftablility = true;
+					};
+					}
+					</script>
+
+					<script>
+					function LicenceBatteries() {
+						if (Money >= 500) {
+						document.getElementById("ImportBatteries").disabled = false;
+						document.getElementById("ExportBatteries").disabled = false;
+						document.getElementById("Batterylicense").disabled = true;
+						Money = Money - 500;
+						Batteriable = true;
+	
+					};
+					}
+					</script>
+
+					<script>
+					function LicenceMetal() {
+						if (Money >= 2000) {
+						document.getElementById("ImportMetal").disabled = false;
+						document.getElementById("ExportMetal").disabled = false;
+						document.getElementById("Metallicense").disabled = true;
+						Money = Money - 2000;
+						Metalable = true;
+	
+					};
+					}
+					</script>
+
+					<script>
+					function LicencePlastic() {
+						if (Money >= 50000) {
+						document.getElementById("ImportPlastic").disabled = false;
+						document.getElementById("ExportPlastic").disabled = false;
+						document.getElementById("Plasticlicense").disabled = true;
+						Money = Money - 50000;
+						Plasticable = true;
+	
+					};
+					}
+					</script>
+
+
+					<!--<button onclick="ImportChips()">Import</button>
+					<button onclick="ExportChips()">Export</button>
+
+					<br>
+
+
+					<select id="goodid">
+					  <option>Coal</option>
+					  <option>Energy</option>
+					  <option>Metal</option>
+					  <option>Plastic</option>
+					</select>
+
+					<button onclick="getOption()">Change</button>
+					<p id="produce"></p>-->
+
+
+					<p>Money</p>
+					<p id="money"></p>
+					<p>The Demand is how much it costs to import or export</p>
+					<p id="demand"></p>
+
+
+
+
+					<script>
+					var Money;
+					Money = 100;
+					var Chips;
+					Chips = 0;
+					document.getElementById("chips").innerHTML =Chips;
+					document.getElementById("money").innerHTML =Money;
+					</script>
+
+					<script>
+					function ImportChips() {
+					if(Money >= Demand) {
+					Chips = Chips + 10;
+					Money = Money - Demand;
+					Demand = Total / 10;
+					Total = Chips + Batteries + Metal + Plastic;
+					document.getElementById("chips").innerHTML =  Chips;
+					document.getElementById("money").innerHTML =  Money;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					};
+					</script>
+
+					<script>
+					function ImportBatteries() {
+					if(Money >= Demand * 20) {
+					Batteries = Batteries + 10;
+					Money = Money - Demand * 20;
+					Demand = Total / 10;
+					Total = Chips + Batteries + Metal + Plastic;
+					document.getElementById("batteries").innerHTML =  Batteries;
+					document.getElementById("money").innerHTML =  Money;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					};
+					</script>
+
+					<script>
+					function ExportBatteries() {
+					if(Batteries >= 1) {
+					Batteries = Batteries - 10;
+					Money = Money + Demand * 20;
+					Demand = Total / 10;
+					Total = Chips + Batteries + Metal + Plastic;
+					document.getElementById("batteries").innerHTML =  Batteries;
+					document.getElementById("money").inerHTML =  Money;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					};
+					</script>
+
+					<script>
+					function ExportMetal() {
+					if(Metal >= 1) {
+					Metal = Metal - 10;
+					Money = Money + Demand * 100;
+					Demand = Total / 10;
+					Total = Chips + Batteries + Metal + Plastic;
+					document.getElementById("metal").innerHTML =  Metal;
+					document.getElementById("money").inerHTML =  Money;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					};
+					</script>
+
+					<script>
+					function ImportMetal() {
+					if(Money >= Demand * 100) {
+					Metal = Metal + 10;
+					Money = Money - Demand * 100;
+					Demand = Total / 10;
+					Total = Chips + Batteries + Metal + Plastic;
+					document.getElementById("metal").innerHTML =  Metal;
+					document.getElementById("money").innerHTML =  Money;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					};
+					</script>
+
+					<script>
+					function ImportPlastic() {
+					if(Money >= Demand * 500) {
+					Plastic = Plastic + 10;
+					Money = Money - Demand * 500;
+					Demand = Total / 10;
+					Total = Chips + Batteries + Metal + Plastic;
+					document.getElementById("plastic").innerHTML =  Plastic;
+					document.getElementById("money").innerHTML =  Money;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					};
+					</script>
+
+					<script>
+					function ExportPlastic() {
+					if(Plastic >= 1) {
+					Plastic = Plastic - 10;
+					Money = Money + Demand * 500;
+					Demand = Total / 10;
+					Total = Chips + Batteries + Metal + Plastic;
+					document.getElementById("plastic").innerHTML =  Plastic;
+					document.getElementById("money").inerHTML =  Money;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					};
+					</script>
+
+
+
+
+					<!--<script>
+					function ImportChips() {
+					if(getOption() = Coal) {
+					if(Money >= Demand) {
+					Chips = Chips + 10;
+					Money = Money - Demand;
+					Demand = Chips / 10;
+					document.getElementById("chips").innerHTML =  Chips;
+					document.getElementById("money").innerHTML =  Money;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					};
+					};
+					</script>-->
+
+					<script>
+					function ExportChips() {
+					if(Chips >= 1) {
+					Chips = Chips - 10;
+					Money = Money + Demand;
+					Demand = Total / 10;
+					Total = Chips + Batteries + Metal + Plastic;
+					document.getElementById("chips").innerHTML =  Chips;
+					document.getElementById("money").inerHTML =  Money;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					};
+					</script>
+
+					<hr> 
+					<button id="inovate" onclick="EnableCrafting()">Buy an Inovations license for $1 mil</button>  
+
+					<p>Local and Global Shipments bulk buy to get better prices.</p>
+
+					<p>Requirements for Crafting:</p>
+					<p>50 000 Coal</p>
+					<p>20 000 Glass</p>
+					<p>3 000 Metal</p>
+					<p>500 Plastic</p>
+
+					<button id="coalshipbuy" onclick="BuyImport()">Buy a Local Coal Shipment</button>
+
+					<p id="inship"></p>
+
+
+
+
+					<script>
+					var LocalShip = 0;
+					var GlobalShip = 0;
+					</script>
+
+					<script>
+					function BuyImport() {
+					if (Chips >= 50000) {
+					if (Batteries >= 20000) {
+					if (Metal >= 3000)	{
+					if (Plastic >= 500)	{
+					Chips = Chips - 50000;
+					Batteries = Batteries - 20000;
+					Metal = Metal - 3000;
+					Plastic = Plastic - 500;
+					LocalShip = LocalShip + 1;
+					document.getElementById("inship").innerHTML =  LocalShip;
+					document.getElementById("chips").innerHTML =  Chips;
+					document.getElementById("batteries").innerHTML =  Batteries;
+					document.getElementById("metal").innerHTML =  Metal;
+					document.getElementById("plastic").innerHTML =  Plastic;
+					};
+					};
+					};
+					};
+					};
+					</script>
+
+					<button id="coalexportbuy" onclick="BuyExport()">Buy a Global Coal Shipment</button>
+
+					<script>
+					function batteriesimportshipbuy() {
+					if (Chips >= 100000) {
+					if (Batteries >= 40000) {
+					if (Metal >= 6000)	{
+					if (Plastic >= 1000)	{
+					Chips = Chips - 100000;
+					Batteries = Batteries - 40000;
+					Metal = Metal - 6000;
+					Plastic = Plastic - 1000;
+					BatteriesLocalShip = BatteriesLocalShip + 1;
+					document.getElementById("batteriesinship").innerHTML = BatteriesLocalShip;
+					document.getElementById("chips").innerHTML =  Chips;
+					document.getElementById("batteries").innerHTML =  Batteries;
+					document.getElementById("metal").innerHTML =  Metal;
+					document.getElementById("plastic").innerHTML =  Plastic;
+					};
+					};
+					};
+					};
+					};
+					</script>
+
+					<script>
+					function batteriesexportshipbuy() {
+					if (Chips >= 100000) {
+					if (Batteries >= 40000) {
+					if (Metal >= 6000)	{
+					if (Plastic >= 1000)	{
+					Chips = Chips - 100000;
+					Batteries = Batteries - 40000;
+					Metal = Metal - 3000;
+					Plastic = Plastic - 1000;
+					BatteriesGlobalShip = BatteriesGlobalShip + 1;
+					document.getElementById("batteriesoutship").innerHTML = BatteriesGlobalShip;
+					document.getElementById("chips").innerHTML =  Chips;
+					document.getElementById("batteries").innerHTML =  Batteries;
+					document.getElementById("metal").innerHTML =  Metal;
+					document.getElementById("plastic").innerHTML =  Plastic;
+					};
+					};
+					};
+					};
+					};
+					</script>
+
+					<script>
+					function BuyExport() {
+					if (Chips >= 50000) {
+					if (Batteries >= 20000) {
+					if (Metal >= 3000)	{
+					if (Plastic >= 500)	{
+					Chips = Chips - 50000;
+					Batteries = Batteries - 20000;
+					Metal = Metal - 3000;
+					Plastic = Plastic - 500;
+					GlobalShip = GlobalShip + 1;
+					document.getElementById("outship").innerHTML = GlobalShip;
+					document.getElementById("chips").innerHTML =  Chips;
+					document.getElementById("batteries").innerHTML =  Batteries;
+					document.getElementById("metal").innerHTML =  Metal;
+					document.getElementById("plastic").innerHTML =  Plastic;
+					};
+					};
+					};
+					};
+					};
+					</script>
+
+					<p id="outship"></p>
+
+
+					<p>Requirements for Crafting:</p>
+					<p>100 000 Coal</p>
+					<p>40 000 Glass</p>
+					<p>6 000 Metal</p>
+					<p>500 Plastic</p>
+
+					<button id="batteriesimportbuy" onclick="batteriesimportshipbuy()">Buy a Local Glass Shipment</button>
+
+					<p id="batteriesinship"></p>
+
+					<button id="batteriesexportbuy" onclick="batteriesexportshipbuy()">Buy a Global Glass Shipment</button>
+
+					<p id="batteriesoutship"></p>
+
+					<!--<script>
+					function Tick() {
+					Chips = Chips + (LocalShip * 10);
+					Chips = Chips - (GlobalShip * 10);
+					Money = Money - (LocalShip * Demand);
+					Money = Money + (GlobalShip  * 1.5 * Demand);
+					Demand = Total / 10;
+					document.getElementById("money").innerHTML = Money;
+					document.getElementById("chips").innerHTML = Chips;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					</script>-->
+
+					<script>
+					function Tickin() {
+					if(Demand * LocalShip <= Money) {
+					Chips = Chips + (LocalShip * 10);
+					Money = Money - (LocalShip * Demand);
+					Demand = Total / 10;
+					Total = Chips + Batteries + Metal + Plastic;
+					document.getElementById("money").innerHTML = Money;
+					document.getElementById("chips").innerHTML = Chips;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					};
+					</script>
+
+
+					<script>
+					function Win() {
+					Money = 9e99999999;
+					Chips = 9e999999;
+					Batteries = 9e99999999;
+					Metal = 9e99999999;
+					Plastic = 9e999999999;
+					clearInterval(interval)
+					document.getElementById("money").innerHTML = Money;
+					document.getElementById("chips").innerHTML = Chips;
+					document.getElementById("batteries").innerHTML = Batteries;
+					document.getElementById("metal").innerHTML = Metal;
+					document.getElementById("plastic").innerHTML = Plastic;
+					};
+					</script>
+
+					<script>
+					function Debug() {
+					Money = 1e6;
+					Chips = 1e6;
+					Batteries = 1e6;
+					Metal = 1e6;
+					Plastic = 1e6;
+					clearInterval(interval)
+					document.getElementById("money").innerHTML = Money;
+					document.getElementById("chips").innerHTML = Chips;
+					document.getElementById("batteries").innerHTML = Batteries;
+					document.getElementById("metal").innerHTML = Metal;
+					document.getElementById("plastic").innerHTML = Plastic;
+					};
+					</script>
+
+
+
+
+					<script>
+					function Tickout() {
+					if(Chips >=  GlobalShip * 10) {
+					Chips = Chips - (GlobalShip * 10);
+					Money = Money + (GlobalShip * 1.5 * Demand);
+					Demand = Total / 10;
+					Total = Chips + Batteries + Metal + Plastic;
+					document.getElementById("money").innerHTML = Money;
+					document.getElementById("chips").innerHTML = Chips;
+					document.getElementById("demand").innerHTML = Demand;
+					};
+					};
+					</script>
+
+
+
+					<script>
+					var interval = setInterval(function(){Tickin();Tickout();}, 1000);
+					</script>
+
+
+
+
+					<script>
+					function Save() {
+						var save = {
+						    Money: Money,
+						    Chips: Chips,
+						    LocalShip: LocalShip,
+							GLobalShip: GlobalShip,
+							Batteries: Batteries,
+							Metal: Metal,
+							Plastic: Plastic,
+							Craftablility: Craftablility,
+							Plasticable: Plasticable,
+							Batteriable: Batteriable,
+							Metalable: Metalable,
+							BatteriesGlobalShip: BatteriesGlobalShip,
+							BatteriesLocalShip: BatteriesLocalShip
+						};
+					localStorage.setItem("save",JSON.stringify(save));
+					JSON.stringify(save);
+					document.getElementById("exportsave").innerHTML =save;
+					};
+					</script>
+
+
+					<!--<script>
+					function Load() {
+					Money = document.getElementById("loadmoney").value;
+					Chips = document.getElementById("loadChips").value;
+					LocalShip = document.getElementById("loadinship").value;
+					GlobalShip = document.getElementById("loadoutship").value;
+    
+					};
+					</script>-->
+
+					<script>
+					function Load() {
+					var savegame = JSON.parse(localStorage.getItem("save"));
+					Money= savegame.Money;
+					Chips= savegame.Chips;
+					LocalShip= savegame.LocalShip;
+					GLobalShip= savegame.GLobalShip;
+					Batteries= savegame.Batteries;
+					Metal=  savegame.Metal;
+					Plastic=  savegame.Plastic;
+					if (savegame.Plasticable = false) {
+						document.getElementById("ImportPlastic").disabled = false;
+						document.getElementById("ExportPlastic").disabled = false;
+						document.getElementById("Plasticlicense").disabled = true;	
+					};
+					if (savegame.Plasticable = true) {	
+						document.getElementById("ImportPlastic").disabled = true;
+						document.getElementById("ExportPlastic").disabled = true;
+						document.getElementById("Plasticlicense").disabled = false;	
+					};
+					if (savegame.Batteriable = false) {
+						document.getElementById("ImportBatteries").disabled = false;
+						document.getElementById("ExportBatteries").disabled = false;
+						document.getElementById("Batterylicense").disabled = true;
+					};
+					if (savegame.Batteriable = true) {
+						document.getElementById("ImportBatteries").disabled = true;
+						document.getElementById("ExportBatteries").disabled = true;
+						document.getElementById("Batterylicense").disabled = false;
+					};
+					if (savegame.Metalable = false) {
+						document.getElementById("ImportMetal").disabled = false;
+						document.getElementById("ExportMetal").disabled = false;
+						document.getElementById("Metallicense").disabled = true;
+					};
+					if (savegame.Metalable = true) {
+						document.getElementById("ImportMetal").disabled = true;
+						document.getElementById("ExportMetal").disabled = true;
+						document.getElementById("Metallicense").disabled = false;
+					};
+					if (savegame.Craftablility = false) {
+						document.getElementById("coalexportbuy").disabled = true;
+						document.getElementById("batteriesimportbuy").disabled = true;	
+						document.getElementById("batteriesexportbuy").disabled = true;	
+						document.getElementById("coalshipbuy").disabled = true;	
+						document.getElementById("inovate").disabled = false;	
+					};
+					if (savegame.Craftablility = true) {
+						document.getElementById("coalexportbuy").disabled = false;
+						document.getElementById("coalshipbuy").disabled = false;
+						document.getElementById("batteriesimportbuy").disabled = false;	
+						document.getElementById("batteriesexportbuy").disabled = false;	
+						document.getElementById("inovate").disabled = true;	
+					};
+					};
+					</script>
+					<button onclick="Fix()">Fix Crafting</button>
+
+					<script>
+					function Fix() {
+						document.getElementById("coalexportbuy").disabled = true;
+						document.getElementById("coalshipbuy").disabled = true;	
+						document.getElementById("batteriesimportbuy").disabled = true;	
+						document.getElementById("batteriesexportbuy").disabled = true;	
+						document.getElementById("inovate").disabled = false;
+
+					};
+					</script>
+
+					<hr> 
+
+
+					<button onclick="Save()">Save</button>
+					<button onclick="Load()">Load</button>
+
+
+					
+						
+					</div>
+				</div>
+			</main>
+			
+			<nav>
+				<div class="innertube">
+<script type="text/javascript" src="//www3.yourshoutbox.com/shoutbox/start.php?key=347501168"></script>
+<a href="http://freedoge.co.in/?r=137624"><img src="/images/dogecoin.png" alt="Mountain View"><a>
+<a href="http://www.000webhost.com/" onClick="this.href='http://www.000webhost.com/842882.html'" target="_blank"><img src=/images/webhost.png alt="Web Hosting"/></a>
+
+				</div>
+			</nav>
+		
+		</div>
+		
+		<footer>
+			<div class="innertube">
+				<!-- Generated by www.webweaver.nu -->
+				<script language="JavaScript">
+				<!--
+				document.write('&copy;' );
+				document.write(' Eviper01');
+				document.write('  2014 - ');
+				document.write(new Date().getFullYear());
+				//-->
+				</script>
+				
+			</div>
+		</footer>
+	
+	</body>
+</html>	
