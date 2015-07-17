@@ -4,7 +4,7 @@
 	<head>
 	   <script src="/js/ads.js"></script>
 
-		<link rel="icon" type="image/vnd.microsoft.icon" href=http://www.thewebsite123.net63.net/images/favicon.ico>
+		<link rel="icon" type="image/vnd.microsoft.icon" href=/images/favicon.ico>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -23,24 +23,24 @@
 		<title>Clicking Gone Global</title>
  	   <link href=/css/Test.css rel="stylesheet">
 	</head>
-	
-	<body>		
+
+	<body>
 
 		<header>
 			<div class="innertube">
 				<h1>The Website</h1>
-				<ul id='menu'> 
-				<li><a href='http://www.thewebsite123.net63.net/'>Home</a></li>
-				<li><a href='http://www.thewebsite123.net63.net/About'>About</a></li>
-				<li><a href='http://www.thewebsite123.net63.net/Articles'>Articles</a></li>
-				<li><a href='http://www.thewebsite123.net63.net/Other'>Other</a></li>
+				<ul id='menu'>
+				<li><a href='/'>Home</a></li>
+				<li><a href='/About'>About</a></li>
+				<li><a href='/Articles'>Articles</a></li>
+				<li><a href='/Other'>Other</a></li>
 				</ul>
-				<link href="http://www.thewebsite123.net63.net/css/Style.css" rel="stylesheet">
+				<link href="/css/Style.css" rel="stylesheet">
 			</div>
 		</header>
-		
+
 		<div id="wrapper">
-		
+
 			<main>
 				<div id="content">
 					<div class="innertube">
@@ -59,7 +59,7 @@
 
 
 					<body onload="diablecrafting()">
-					<body onload="Load()">	
+					<body onload="Load()">
 
 					<p>Coal</p>
 					<p id="chips"></p>
@@ -111,10 +111,10 @@
 					<script>
 					function getOption() {
 					   var obj = document.getElementById("goodid");
-					    document.getElementById("produce").innerHTML = 
+					    document.getElementById("produce").innerHTML =
 					    obj.options[obj.selectedIndex].text;
 						return document.getElementById("goodid");
-					    document.getElementById("produce").innerHTML = 
+					    document.getElementById("produce").innerHTML =
 					    obj.options[obj.selectedIndex].text;
 					}
 					</script>
@@ -154,7 +154,7 @@
 					<script>
 					var BatteriesLocalShip = 0;
 					var BatteriesGlobalShip = 0;
-					</script> 
+					</script>
 
 					<script>
 					function EnableCrafting() {
@@ -179,7 +179,7 @@
 						document.getElementById("Batterylicense").disabled = true;
 						Money = Money - 500;
 						Batteriable = true;
-	
+
 					};
 					}
 					</script>
@@ -192,7 +192,7 @@
 						document.getElementById("Metallicense").disabled = true;
 						Money = Money - 2000;
 						Metalable = true;
-	
+
 					};
 					}
 					</script>
@@ -205,7 +205,7 @@
 						document.getElementById("Plasticlicense").disabled = true;
 						Money = Money - 50000;
 						Plasticable = true;
-	
+
 					};
 					}
 					</script>
@@ -375,8 +375,8 @@
 					};
 					</script>
 
-					<hr> 
-					<button id="inovate" onclick="EnableCrafting()">Buy an Inovations license for $1 mil</button>  
+					<hr>
+					<button id="inovate" onclick="EnableCrafting()">Buy an Inovations license for $1 mil</button>
 
 					<p>Local and Global Shipments bulk buy to get better prices.</p>
 
@@ -625,7 +625,7 @@
 					Chips = document.getElementById("loadChips").value;
 					LocalShip = document.getElementById("loadinship").value;
 					GlobalShip = document.getElementById("loadoutship").value;
-    
+
 					};
 					</script>-->
 
@@ -642,12 +642,12 @@
 					if (savegame.Plasticable = false) {
 						document.getElementById("ImportPlastic").disabled = false;
 						document.getElementById("ExportPlastic").disabled = false;
-						document.getElementById("Plasticlicense").disabled = true;	
+						document.getElementById("Plasticlicense").disabled = true;
 					};
-					if (savegame.Plasticable = true) {	
+					if (savegame.Plasticable = true) {
 						document.getElementById("ImportPlastic").disabled = true;
 						document.getElementById("ExportPlastic").disabled = true;
-						document.getElementById("Plasticlicense").disabled = false;	
+						document.getElementById("Plasticlicense").disabled = false;
 					};
 					if (savegame.Batteriable = false) {
 						document.getElementById("ImportBatteries").disabled = false;
@@ -671,17 +671,17 @@
 					};
 					if (savegame.Craftablility = false) {
 						document.getElementById("coalexportbuy").disabled = true;
-						document.getElementById("batteriesimportbuy").disabled = true;	
-						document.getElementById("batteriesexportbuy").disabled = true;	
-						document.getElementById("coalshipbuy").disabled = true;	
-						document.getElementById("inovate").disabled = false;	
+						document.getElementById("batteriesimportbuy").disabled = true;
+						document.getElementById("batteriesexportbuy").disabled = true;
+						document.getElementById("coalshipbuy").disabled = true;
+						document.getElementById("inovate").disabled = false;
 					};
 					if (savegame.Craftablility = true) {
 						document.getElementById("coalexportbuy").disabled = false;
 						document.getElementById("coalshipbuy").disabled = false;
-						document.getElementById("batteriesimportbuy").disabled = false;	
-						document.getElementById("batteriesexportbuy").disabled = false;	
-						document.getElementById("inovate").disabled = true;	
+						document.getElementById("batteriesimportbuy").disabled = false;
+						document.getElementById("batteriesexportbuy").disabled = false;
+						document.getElementById("inovate").disabled = true;
 					};
 					};
 					</script>
@@ -690,27 +690,27 @@
 					<script>
 					function Fix() {
 						document.getElementById("coalexportbuy").disabled = true;
-						document.getElementById("coalshipbuy").disabled = true;	
-						document.getElementById("batteriesimportbuy").disabled = true;	
-						document.getElementById("batteriesexportbuy").disabled = true;	
+						document.getElementById("coalshipbuy").disabled = true;
+						document.getElementById("batteriesimportbuy").disabled = true;
+						document.getElementById("batteriesexportbuy").disabled = true;
 						document.getElementById("inovate").disabled = false;
 
 					};
 					</script>
 
-					<hr> 
+					<hr>
 
 
 					<button onclick="Save()">Save</button>
 					<button onclick="Load()">Load</button>
 
 
-					
-						
+
+
 					</div>
 				</div>
 			</main>
-			
+
 			<nav>
 				<div class="innertube">
 <script type="text/javascript" src="//www3.yourshoutbox.com/shoutbox/start.php?key=347501168"></script>
@@ -719,9 +719,9 @@
 
 				</div>
 			</nav>
-		
+
 		</div>
-		
+
 		<footer>
 			<div class="innertube">
 				<!-- Generated by www.webweaver.nu -->
@@ -733,9 +733,9 @@
 				document.write(new Date().getFullYear());
 				//-->
 				</script>
-				
+
 			</div>
 		</footer>
-	
+
 	</body>
-</html>	
+</html>
