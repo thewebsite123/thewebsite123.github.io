@@ -19,7 +19,7 @@
 		  }
 		</script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>About</title>
+		<title>Alphabetical Orderer</title>
  	   <link href=/css/Test.css rel="stylesheet">
 
 	</head>
@@ -44,24 +44,28 @@
 			<main>
 				<div id="content">
 					<div class="innertube">
-						<h1>About</h1>
-<p>The website is a content site created by high school student Eviper01<br>  Email: <a href="mailto:eviper01@thewebsite123.net63.net" target="_top">eviper01@thewebsite123.net63.net</a><br>Donate Dogecoin: DGcEpFkrC7fiVvqAnHaxUnj3QFau7uqnaE </p>
-						<h>The Enigma Behind the Mask</h><p> Eviper01<br> Roles and Responsibilities:</p>
+						
+						<script>
+						var Main = new Array//list of inputed words
+						</script>
+						<script>
+						        function test()
+						        {
+						            var userInput = document.getElementById("userInput").value.toLowerCase();;
+								    Main.push(userInput);//add the typed word to the end of the array
+					
+									Main.sort()
+									document.getElementById("demo").innerHTML = Main;//sort the array
+						        }
+						    </script>
+						
+						<h1>Alphabetical Orderer</h1>
+						<p>Type a word into the text input and press order as many times as you need to order a list of words<p>
+					    <input type="text" id="userInput"=></input>
+					    <button onclick="test()">Order</button>
 
-						<p>&bull; The Technical Stuff<br> &bull; Business <strike>and Public Relations(ish)</strike><br>
- &bull; Pump his blood and sweat into the website<br> &bull; Taking all the credit</p>
-
-						<h>The Other Guy</h><p> Scorpilla<br>
-Email:</p><a href="mailto:scorpilla@thewebsite123.net63.net" target="_top">scorpilla@thewebsite123.net63.net</a><br>
-Roles and Responsibilities: <p>&bull; The creative side of things<br>
-&bull; Writing<br>
- &bull; Throwing a wrench in the code <br>
-&bull; Putting strikethrough on <b>EVERYTHING</b>. <br>
-<strike>&bull; Messing with Eviper01&rsquo;s head</strike><b> I LIKE TO THINK OF IT AS FORCEFUL REJUVENATION</b></p>
-<br>
-<a href="/About/Sisters.html">Also check out our sister sites!</a>
-						<p> </p>
-
+						<p id="demo"></p>
+						
 					</div>
 				</div>
 			</main>
