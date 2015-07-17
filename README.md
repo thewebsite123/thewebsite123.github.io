@@ -1,5 +1,5 @@
 # The Website
-From now on all changes to www.thewebsite123.net63.net will be changed using this repository https://github.com/Eviper01/Eviper01.github.io
+From now on all changes to www.thewebsite123.net63.net will be changed using this repository https://github.com/Eviper01/The-Webiste-Repo
 
 What this means:
 
