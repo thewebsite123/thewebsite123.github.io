@@ -2,18 +2,24 @@
   font-family: 'Orbitron';
   font-style: normal;
   font-weight: 500;
-  src: local('Orbitron-Medium'), url(http://themes.googleusercontent.com/static/fonts/orbitron/v3/VK2oK8L4CJesxwY5dF3zxbrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+  src: local('Orbitron-Medium'), url(/fonts/Very-Damaged.woff) format('woff');
 }
 @font-face {
   font-family: 'Orbitron';
   font-style: normal;
   font-weight: 900;
-  src: local('Orbitron-Black'), url(http://themes.googleusercontent.com/static/fonts/orbitron/v3/FyvTORElv6iWeP2Jf9yG3brIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+  src: local('Orbitron-Black'), url(/fonts/Very-Damaged.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Monoid';
+  font-style: normal;
+  src: local('Monoid-Regular'), url(/fonts/Monoid-Regular.woff) format('woff');
 }
 
 html,
 body {
-    font-family             : Arial, Helvetica, sans-serif;
+    font-family             : 'Monoid';
     font-size               : 16px;
     color                   : #ccc;
     background              : url(background.jpg) no-repeat center center fixed;
