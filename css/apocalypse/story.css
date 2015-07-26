@@ -65,7 +65,7 @@ p {
     margin-top   : 120px;
     height       : 400px;
     overflow     : auto;
-    background   : url(inventory-bg.png);
+    background   : rgba(4, 39, 48, 0.8);
     padding      : 20px
 }
 
