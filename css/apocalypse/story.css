@@ -2,13 +2,13 @@
   font-family: 'Monoid';
   font-style: normal;
   font-weight: 500;
-  src: local('Monoid-Regular'), url(/fonts/Monoid/Monoid-Regular.tff) format('tff');
+  src: local('Monoid-Regular'), url(http://thewebsite123.github.io/fonts/Monoid/Monoid-Regular.tff) format('tff');
 }
 @font-face {
   font-family: 'Monoid';
   font-style: normal;
   font-weight: 900;
-  src: local('Monoid-Regular'), url(/fonts/Monoid/Monoid-Regular.tff) format('tff');
+  src: local('Monoid-Regular'), url(http://thewebsite123.github.io/fonts/Monoid/Monoid-Regular.tff) format('tff');
 }
 
 html,
