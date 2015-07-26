@@ -49,7 +49,7 @@ p {
     padding-bottom      : 100px;
     height              : 100%;
     padding-top         : 30px;
-
+    background-image    : url(frame.png);
     background-repeat   : no-repeat;
     background-position : 65px 139px;
 }
