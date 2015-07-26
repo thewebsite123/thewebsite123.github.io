@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'Orbitron';
+  font-family: 'Monoid';
   font-style: normal;
   font-weight: 500;
-  src: local('Orbitron-Medium'), url(http://themes.googleusercontent.com/static/fonts/orbitron/v3/VK2oK8L4CJesxwY5dF3zxbrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+  src: local('Monoid-Regular'), url(/fonts/Monoid/Monoid-Regular.tff) format('tff');
 }
 @font-face {
-  font-family: 'Orbitron';
+  font-family: 'Monoid';
   font-style: normal;
   font-weight: 900;
-  src: local('Orbitron-Black'), url(http://themes.googleusercontent.com/static/fonts/orbitron/v3/FyvTORElv6iWeP2Jf9yG3brIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+  src: local('Monoid-Regular'), url(/fonts/Monoid/Monoid-Regular.tff) format('tff');
 }
 
 html,
@@ -155,7 +155,7 @@ p {
     margin-left  : 20px;
     padding-left : 10px;
     height       : 40px;
-    font-family  : 'Orbitron';
+    font-family  : 'Monoid';
     text-shadow  : 0 0 5px #1ff05f;
 }
 #undoHost {

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adrift</title>
+	<link rel="icon" type="image/vnd.microsoft.icon" href=/images/favicon.ico>
+    <script src="/js/doT.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/dedalus.js"></script>
+    <script src="/js/dedalus-web.js"></script>
+
+    <link rel="stylesheet" href="/css/apocalypse/story.css">
+
+ </head>
+<body>
+    <div id="story">
+
+        <initscript>
+        </initscript>
+
+        <beforeEveryThing>
+        </beforeEveryThing>
+
+        <beforeEveryPageTurn>
+        </beforeEveryPageTurn>
+
+        <beforeEveryParagraphShown>
+        </beforeEveryParagraphShown>
+
+        <afterEveryThing>
+        </afterEveryThing>
+
+        <afterEveryPageTurn>
+        </afterEveryPageTurn>
+
+        <afterEveryParagraphShown>
+        </afterEveryParagraphShown>
+
+        <!-- Novel -->
+        <title>Adrift</title>
+
+        <!-- Objects -->
+        <obj id="cover" inventoryName="An object">
+            <action id="Examine">
+              The Vent Cover is stuck fast!
+            </action>
+
+            <action id="Pry">
+              You pull hard and pry the cover off showing a <turn to="vents">small crawl space.</turn>
+            </action>
+
+        </obj>
+
+        <obj id="roofcover" inventoryName="An object">
+            <action id="Examine">
+              The Vent Cover is stuck fast!
+            </action>
+
+            <action id="Pry">
+              You pull hard and pry the cover off showing a <turn to="medicallab">medical lab</turn>
+            </action>
+
+        </obj>
+
+        <obj id="toolbox" inventoryName="An object">
+            <action id="Examine">
+              A Small toolbox used by engineers
+            </action>
+
+            <action id="Open">
+            You Open the tool box it only contains a <interact with="coiladjuster">coil adjuster</interact> and a small lenght of <interact with="opticfibre">optic fibre</interact>
+            </action>
+
+        </obj>
+
+        <obj id="opticfibre" inventoryName="Optic Fibre">
+            <action id="Examine">
+              A small coil of optic fibre used to connect ship systems
+            </action>
+
+            <action id="Take">
+              <when>!story.isInInventory('opticfibre')</when>
+          {{ story.putInInventory('opticfibre'); }}
+          This will come in handy!
+            </action>
+
+        </obj>
+
+        <obj id="coiladjuster" inventoryName="Coil Adjuster">
+            <action id="Examine">
+              A tool used to adjust the auto computers used in the ships systems or "coils"
+            </action>
+
+            <action id="Take">
+              <when>!story.isInInventory('coiladjuster')</when>
+          {{ story.putInInventory('coiladjuster'); }}
+          This will come in handy!
+            </action>
+
+        </obj>
+
+        <obj id="key" inventoryName="Key Card">
+            <action id="Examine">
+            A key card officers use to open doors and interface with computer terminals
+            </action>
+
+            <action id="Take">
+              <when>!story.isInInventory('key')</when>
+          {{ story.putInInventory('key'); }}
+          This will come in handy!
+            </action>
+
+        </obj>
+
+        <obj id="corridorleft" inventoryName="Key Card">
+            <action id="Unlock">
+              <when>story.isInInventory('key')</when>
+you unlock the door revealing a room with a <interact with="toolbox">toolbox</interact>
+            </action>
+
+            <action id="Open">
+The door is locked
+            </action>
+
+        </obj>
+
+        <obj id="terminal" inventoryName="Key Card">
+            <action id="Interface">
+              <when>story.isInInventory('key')</when>
+You use your key card to interface with the terminal, however the terminal is damaged the <interact with="repair">optic fibre</interact> is need of replace ment
+            </action>
+            <action id="Examine">
+              You will need a keycard with officer previlages to use the tranporter terminal
+</action>
+        </obj>
+
+        <obj id="repair" inventoryName="Key Card">
+            <action id="Repair">
+              <when>story.isInInventory('opticfibre')</when>
+You repair the terminal and are able to activate the tranporter the computer is locked on a single destination the <turn to="medicallab">medical lab</turn>
+            </action>
+        </obj>
+
+        <obj id="MDD" inventoryName="MD Device">
+            <action id="Examine">
+A weapon designed to casue the chemical bonds between atoms to break apart resualting in mass destruciton when applied
+            </action>
+            <action id="Take">
+              <when>!story.isInInventory('MDD')</when>
+          {{ story.putInInventory('MDD'); }}
+          Finally you are no longer defenceless!
+            </action>
+        </obj>
+
+        <character id="odddoc">
+    <action id="Ask how he got in the closet">
+        <p>The Docotor looks at you strangely:</p>
+        <p>You know! you pirates captured my ship and forced me to work for you!</p>
+    </action>
+
+    <action id="Ask how why he is hiding">
+        <p>The Docotor wimpers:</p>
+        <p>I thought I could escape through a <turn to="shuttles">shuttle!</turn></p>
+    </action>
+
+    <action id="Shoot him">
+        <when>story.isInInventory('MDD')</when>
+        <p>You Decide to put him out of his misery</p>
+        <p>Your new MDD is very effective and he doesn't even have time to understand what is happening as he dies</p>
+        <p>as he dies the computer barks and alert: weapons detected! sending troops from the <turn to="bridge">bridge</turn></p>
+    </action>
+</character>
+
+<obj id="shoot" inventoryName="MD Device">
+    <action id="Fire!">
+      <when>story.isInInventory('MDD')</when>
+the cover covering the way out crumbles revialling the <turn to="bridge">bridge</turn>
+    </action>
+</obj>
+
+<obj id="fixit" inventoryName="MD Device">
+    <action id="Repair">
+      <when>story.isInInventory('coiladjuster')</when>
+you use the coil adjuster to get the engines online, you plot a course for the nearest colonized planet you are unsure what unfolded exacly on the ship but thank god you escaped!
+{{ story.endGame(); }}
+    </action>
+</obj>
+
+        <!-- Pages -->
+        <page id="intro">
+          You are the last surviver of the starship Unknown Ground your ship was boarded by pirates and you must put them to justice
+        </page>
+
+        <page id="cell" class="first">
+            You are in an empty room except for a <show paragraph="cellcorridor">door</show>.
+
+            <p>The Rumble of the engines confirms that you are on a starship</p>
+
+            <p>Looking around with more attention, you notice <interact with="cover">a vent</interact> on the roof</p>
+
+            <paragraph id="cellcorridor">
+                          You open the door, supurised that it isn't locked showing a <turn to="corridor">long corridor</turn>
+                        </paragraph>
+
+        </page>
+
+        <page id="corridor">
+          You Walk into a dark corridor there are doors on either side to the <show paragraph="corridorright">right</show> and to the <interact with="corridorleft">left</interact> as well as a <show paragraph="alclove">storage alcolve</show>
+
+
+          <paragraph id="corridorright">
+                      One by one you try the doors and eventually find a <turn to="transporter">room</turn> with a transporter pad
+                      </paragraph>
+
+                      <paragraph id="alclove">
+                                There is a <interact with="key">key</interact> in the alcove
+                                  </paragraph>
+
+
+      </page>
+
+        <page id="vents">
+          you are in a cramped crawl space. There is an <show paragraph="pannel">open pannel</show> futher along the corridor and behind you there is a <interact with="roofcover">vent</interact> leading into another room.
+
+          <paragraph id="pannel">
+                        you crawl toward the pannel and look at the inner workings of the ship. it is the coolant system and it appears to be damaged. you notice a  <interact with="toolbox">tool box</interact> to the right
+                      </paragraph>
+        </page>
+
+
+<page id="transporter">
+  You walk into the transpoter room to your left you see a small <interact with="terminal">terminal</interact>
+  <p>glancing around you notice small ladder leading <show paragraph="ladderup">up</show> and <show paragraph="ladderdown">down</show></p>
+
+<paragraph id="ladderup">
+You glance up the ladder and see the <turn to="bridge">bridge!</turn> you might be able to gain control of the ship!
+</paragraph>
+
+<paragraph id="ladderdown">
+Inside you notice a <turn to="weaponslocker">weapons locker</turn> there might be a few weapons inside
+</paragraph>
+</page>
+
+<page id="medicallab">
+You enter the medical lab on a small table you notice a <interact with="MDD">Molecular Depolaristation Device</interact>
+
+<p>Suddenly you here a voice a small mumer in one of the back <show paragraph="storagetalk">rooms</show></p>
+
+<paragraph id="storagetalk">
+You open the door to the storage room and you are greated by an <interact with="odddoc">odd doctor</interact>, you immediatly jump pack in alarm but soon realise that he is harmless
+</paragraph>
+</page>
+
+<page id="weaponslocker">
+  You climb down the weapons locker to the armoury behind you. the door slams shut behind you, your stuck! not all is lost their is a row of <interact with="MDD">MD Deivces</interact> you might be able to <interact with="shoot">blast your way to the bridge</interact>
+</page>
+
+
+    <page id="shuttles">
+    After navigating a maze of corridors you finally make your way to a shuttle bay, which obviously countains shuttles, you could use them to <show paragraph="escape">escape</show>
+    </page>
+
+    <page id="bridge">
+    Finnally you made it to the bridge, you can plot and <show paragraph="escape">escape</show> course
+    </page>
+
+
+        <paragraph id="escape">
+        As you try to fire up the engines you notice that the master control coil is damaged, you will need to <interact with="fixit">fix it</interact> to escape!
+        </paragraph>
+</div>
+    <div id="wrapper">
+        <div id="title"></div>
+
+        <div id="inventoryHostWrapper">
+            <h2>Inventory</h2>
+            <div id="inventoryHost"></div>
+        </div>
+
+        <div id="host"></div>
+    </div>
+
+    <div id="interactionHost"></div>
+
+    <div id="undoStageHost"></div>
+
+    <div id="footer">
+        <a id="undoHost" href="#">Undo</a> &bull; <a id="saveHost" href="#">Save</a> &bull; <a id="restoreHost" href="#">Restore</a> &bull; <a id="reseteHost" href="#">Reset</a>
+    </div>
+
+    <script>
+        $(function () {
+            new DedalusWeb({
+                domSource         : $('#story'),
+                domTarget         : $('#host'),
+                titleTarget       : $('#title'),
+                inventoryTarget   : $('#inventoryHost'),
+                interactionTarget : $('#interactionHost'),
+                undoTarget        : $('#undoHost'),
+                undoStageTarget   : $('#undoStageHost'),
+                saveTarget        : $('#saveHost'),
+                restoreTarget     : $('#restoreHost'),
+                resetTarget       : $('#reseteHost'),
+            });
+        });
+
+    </script>
+</body>
+</html>
