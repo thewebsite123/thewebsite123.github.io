@@ -35,7 +35,7 @@ body {
 a {
     text-decoration : none;
     color           : #fff;
-    text-shadow     : 0 0 5px #12b6df;
+    text-shadow     : 0 0 5px #FF0000;
 }
 p {
     margin-top    : 10px;
@@ -73,15 +73,15 @@ p {
     position      : absolute;
     top           : 0;
     left          : 0;
-    border-bottom : 2px solid rgba(25, 162, 200, 0.5);
+    border-bottom : 2px solid rgba(181, 40, 40, 0.5);
     padding-left  : 40%;
     padding-top   : 30px;
     font-family   : 'Orbitron';
     font-size     : 34px;
     font-weight   : bold;
-    color         : #15ccfa;
-    text-shadow   : 0 0 10px #12b6df;
-    background    : rgba(5, 52, 64, 0.3);
+    color         : #FF0000;
+    text-shadow   : 0 0 10px #FF0000;
+    background    : rgba(181, 40, 40, 0.3);
     width         : 100%;
     text-align    : left;
     height        : 60px;
@@ -93,7 +93,7 @@ p {
     margin           : 0;
     padding          : 5px;
     padding-top      : 10px;
-    border : 1px solid #15ccfa;
+    border : 1px solid #FF0000;
     -webkit-box-shadow:0 0 15px #ffffff;
     -moz-box-shadow: 0 0 15px #ffffff;
     box-shadow:0 0 15px #ffffff;
@@ -133,8 +133,8 @@ p {
 }
 #inventoryHostWrapper h2 {
     font-family   : 'Orbitron';
-    text-shadow   : 0 0 5px #1ff05f;
-    color         : #1ff05f;
+    text-shadow   : 0 0 5px #FF0000;
+    color         : #FF0000;
     font-size     : 18px;
     width         : 130px;
     text-align    : center;
@@ -162,7 +162,7 @@ p {
     padding-left : 10px;
     height       : 40px;
     font-family  : 'Orbitron';
-    text-shadow  : 0 0 5px #1ff05f;
+    text-shadow  : 0 0 5px #FF0000;
 }
 #undoHost {
     padding-top : 20px;
