@@ -88,19 +88,19 @@ p {
 }
 
 @-webkit-keyframes redPulse {
-    from { background-color: #E62020; -webkit-box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
-    50% {  background-color: #FF0000; -webkit-box-shadow: 0 0 10px #ffffff; }
-    to {   background-color: #E62020; -webkit-box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+    from {  -webkit-box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+    50% {   -webkit-box-shadow: 0 0 10px #ffffff; }
+    to {    -webkit-box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
 }
 @-moz-keyframes redPulse {
-    from { background-color: #E62020; box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
-    50% {  background-color: #FF0000; box-shadow: 0 0 10px #ffffff; }
-    to {   background-color: #E62020; box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+    from {  box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+    50% {   box-shadow: 0 0 10px #ffffff; }
+    to {    box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
 }
 @keyframes redPulse {
-    from { background-color: #E62020; box-shadow: 0 0 5px rgba(181, 40, 40, 0);}
-    50% {  background-color: #FF0000; box-shadow: 0 0 10px #ffffff; }
-    to {   background-color: #E62020; box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+    from { box-shadow: 0 0 5px rgba(181, 40, 40, 0);}
+    50% {  box-shadow: 0 0 10px #ffffff; }
+    to {   box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
 }
 
 #interactionHost {
