@@ -88,19 +88,19 @@ p {
 }
 
 @-webkit-keyframes redPulse {
-    from {  -webkit-box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
-    50% {   -webkit-box-shadow: 0 0 10px #ffffff; }
-    to {    -webkit-box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+    from {  -webkit-box-shadow:  rgba(181, 40, 40, 0); }
+    50% {   -webkit-box-shadow:  #ffffff; }
+    to {    -webkit-box-shadow:  rgba(181, 40, 40, 0); }
 }
 @-moz-keyframes redPulse {
-    from {  box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
-    50% {   box-shadow: 0 0 10px #ffffff; }
-    to {    box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+    from {  box-shadow:  rgba(181, 40, 40, 0); }
+    50% {   box-shadow: #ffffff; }
+    to {    box-shadow: rgba(181, 40, 40, 0); }
 }
 @keyframes redPulse {
-    from { box-shadow: 0 0 5px rgba(181, 40, 40, 0);}
-    50% {  box-shadow: 0 0 10px #ffffff; }
-    to {   box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+    from { box-shadow: rgba(181, 40, 40, 0);}
+    50% {  box-shadow: #ffffff; }
+    to {   box-shadow:  rgba(181, 40, 40, 0); }
 }
 
 #interactionHost {
