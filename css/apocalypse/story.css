@@ -87,6 +87,22 @@ p {
     height        : 60px;
 }
 
+@-webkit-keyframes redPulse {
+    from { background-color: #E62020; -webkit-box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+    50% {  background-color: #FF0000; -webkit-box-shadow: 0 0 10px #ffffff; }
+    to {   background-color: #E62020; -webkit-box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+}
+@-moz-keyframes redPulse {
+    from { background-color: #E62020; box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+    50% {  background-color: #FF0000; box-shadow: 0 0 10px #ffffff; }
+    to {   background-color: #E62020; box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+}
+@keyframes redPulse {
+    from { background-color: #E62020; box-shadow: 0 0 5px rgba(181, 40, 40, 0);}
+    50% {  background-color: #FF0000; box-shadow: 0 0 10px #ffffff; }
+    to {   background-color: #E62020; box-shadow: 0 0 5px rgba(181, 40, 40, 0); }
+}
+
 #interactionHost {
     position         : absolute;
     overflow         : auto;
@@ -94,10 +110,16 @@ p {
     padding          : 5px;
     padding-top      : 10px;
     border : 1px solid #FF0000;
-    -webkit-box-shadow:0 0 15px #ffffff;
-    -moz-box-shadow: 0 0 15px #ffffff;
-    box-shadow:0 0 15px #ffffff;
-    height           : 24px;
+    -webkit-animation-name            : redPulse;
+    -webkit-animation-duration        : 2s;
+    -webkit-animation-iteration-count : infinite;
+    -moz-animation-name               : redPulse;
+    -moz-animation-duration           : 2s;
+    -moz-animation-iteration-count    : infinite;
+    animation-name                    : redPulse;
+    animation-duration                : 2s;
+    animation-iteration-count         : infinite;
+}    height           : 24px;
     background-image    : url(inventory-bg.png);
 }
 #interactionHost ul,
