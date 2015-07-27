@@ -81,7 +81,7 @@ p {
     font-weight   : bold;
     color         : #FF0000;
     text-shadow   : 0 0 10px #FF0000;
-    background    : rgba(181, 40, 40, 0.3);
+    background-image    : url(inventory-bg.png);
     width         : 100%;
     text-align    : left;
     height        : 60px;
