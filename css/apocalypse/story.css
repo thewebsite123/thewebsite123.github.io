@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'Orbitron';
+  font-family: 'Damaged';
   font-style: normal;
   font-weight: 500;
-  src: local('Orbitron-Medium'), url(/fonts/Very-Damaged.woff) format('woff');
+  src: local('Very-Damaged'), url(/fonts/Very-Damaged.woff) format('woff');
 }
 @font-face {
-  font-family: 'Orbitron';
+  font-family: 'Damaged';
   font-style: normal;
   font-weight: 900;
-  src: local('Orbitron-Black'), url(/fonts/Very-Damaged.woff) format('woff');
+  src: local('Very-Damaged'), url(/fonts/Very-Damaged.woff) format('woff');
 }
 
 @font-face {
@@ -76,7 +76,7 @@ p {
     border-bottom : 2px solid rgba(181, 40, 40, 0.5);
     padding-left  : 40%;
     padding-top   : 30px;
-    font-family   : 'Orbitron';
+    font-family   : 'Damaged';
     font-size     : 34px;
     font-weight   : bold;
     color         : #FF0000;
@@ -132,7 +132,7 @@ p {
     padding-bottom   : 20px;
 }
 #inventoryHostWrapper h2 {
-    font-family   : 'Orbitron';
+    font-family   : 'Damaged';
     text-shadow   : 0 0 5px #FF0000;
     color         : #FF0000;
     font-size     : 18px;
@@ -161,7 +161,7 @@ p {
     margin-left  : 20px;
     padding-left : 10px;
     height       : 40px;
-    font-family  : 'Orbitron';
+    font-family  : 'Damaged';
     text-shadow  : 0 0 5px #FF0000;
 }
 #undoHost {
