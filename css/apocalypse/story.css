@@ -98,7 +98,7 @@ p {
     -moz-box-shadow: 0 0 15px #ffffff;
     box-shadow:0 0 15px #ffffff;
     height           : 24px;
-    background       : rgba(181, 40, 40, 1);
+    background-image    : url(inventory-bg.png);
 }
 #interactionHost ul,
 #inventoryHost ul {
@@ -128,7 +128,7 @@ p {
     margin-left      : 50%;
     left             : -429px;
     position         : absolute;
-    background   : rgba(181, 40, 40, 0.6);
+    background-image    : url(inventory-bg.png);
     padding-bottom   : 20px;
 }
 #inventoryHostWrapper h2 {
