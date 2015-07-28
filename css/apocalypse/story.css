@@ -104,6 +104,7 @@ p {
 }
 
 #interactionHost {
+    white-space: pre-line;
     position                          : absolute;
     overflow                          : auto;
     margin                            : 0;
