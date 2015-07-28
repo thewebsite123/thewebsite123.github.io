@@ -107,8 +107,8 @@ p {
     position                          : absolute;
     overflow                          : auto;
     margin                            : 0;
-    padding                           : 3px;
-    padding-left                      : 5px;
+    padding                           : 5px;
+    padding-top                       : 10px;
     border                            : 1px solid #FF0000;
     -webkit-animation-name            : redPulse;
     -webkit-animation-duration        : 2s;
