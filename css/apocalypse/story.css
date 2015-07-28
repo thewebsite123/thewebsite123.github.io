@@ -104,12 +104,12 @@ p {
 }
 
 #interactionHost {
-    position         : absolute;
-    overflow         : auto;
-    margin           : 0;
-    padding          : 5px;
-    padding-top      : 10px;
-    border : 1px solid #FF0000;
+    position                          : absolute;
+    overflow                          : auto;
+    margin                            : 0;
+    padding                           : 5px;
+    padding-top                       : 10px;
+    border                            : 1px solid #FF0000;
     -webkit-animation-name            : redPulse;
     -webkit-animation-duration        : 2s;
     -webkit-animation-iteration-count : infinite;
@@ -119,8 +119,8 @@ p {
     animation-name                    : redPulse;
     animation-duration                : 2s;
     animation-iteration-count         : infinite;
-    height           : 24px;
-    background-image    : url(inventory-bg.png);
+    height                            : 24px;
+    background-image                  : url(inventory-bg.png);
 }
 #interactionHost ul,
 #inventoryHost ul {
