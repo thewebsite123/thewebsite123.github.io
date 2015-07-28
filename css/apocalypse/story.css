@@ -104,7 +104,6 @@ p {
 }
 
 #interactionHost {
-    word-spacing: 9999999px;
     position                          : absolute;
     overflow                          : auto;
     margin                            : 0;
