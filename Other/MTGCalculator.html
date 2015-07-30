@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="checkbox" id="Question1" value="Question1"> Do you enjoy card games?<br>
+<input type="checkbox" id="Question2" value="Question2"> Do you have too much money/time?<br>
+<input type="checkbox" id="Question3" value="Question3"> Do you enjoy people picking up your expensive cards and going "Woo, shiny!"<br>
+<input type="checkbox" id="Question4" value="Question4"> Do you like building decks that can reach ridiculious levels of awesome?<br>
+<input type="checkbox" id="Question5" value="Question5"> Do you like seeing your totally awesome decks get crushed before your eyes?<br>
+<input type="checkbox" id="Question6" value="Question6"> Do you like games with a skill curve so steep that it does a loop-de-loop?<br>
+<input type="button" onclick="CalculateCanIMTG ()" value="Calculate" />
+<br>
+<input type="button" onclick="ResetCanIMTG ()" value="Reset" /> Press this after clicking Calculate because everything breaks if you don't.<br><br>The number that just popped up is your MTG number. Check the chart below for more info. <br>
+
+Below 10? Nope! <br>
+10-15 If you really want to, you should buy a cheap deck and give it a try.<br>
+16-20 I would reccomend you start playing it, if you're interested.
+21-24 Yup, you should start playing MTG!<br>
+
+<script type="text/javascript">
+var CanIMTG = 0
+
+function CalculateCanIMTG() {
+    {
+    if (document.getElementById("Question1").checked == true)
+        CanIMTG = CanIMTG + 5
+    }
+    {
+    if (document.getElementById("Question2").checked == true)
+        CanIMTG = CanIMTG + 4
+    }
+    {
+    if (document.getElementById("Question3").checked == true)
+        CanIMTG = CanIMTG + 3
+    }
+    {
+    if (document.getElementById("Question4").checked == true)
+        CanIMTG = CanIMTG + 5
+    }
+    {
+    if (document.getElementById("Question5").checked == true)
+        CanIMTG = CanIMTG + 3
+    }
+    {
+    if (document.getElementById("Question6").checked == true)
+        CanIMTG = CanIMTG + 4
+    }
+    {
+    alert (CanIMTG)
+    }
+}
+function ResetCanIMTG () {
+CanIMTG = 0
+}
+</script>
+</body>
+</html>
