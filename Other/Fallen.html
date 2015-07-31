@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fallen</title>
+	<link rel="icon" type="image/vnd.microsoft.icon" href=/images/favicon.ico>
+    <script src="/js/doT.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/dedalus.js"></script>
+    <script src="/js/dedalus-web.js"></script>
+
+    <link rel="stylesheet" href="/css/apocalypse/story.css">
+
+ </head>
+<body>
+    <div id="story">
+
+        <initscript>
+        </initscript>
+
+        <beforeEveryThing>
+        </beforeEveryThing>
+
+        <beforeEveryPageTurn>
+        </beforeEveryPageTurn>
+
+        <beforeEveryParagraphShown>
+        </beforeEveryParagraphShown>
+
+        <afterEveryThing>
+        </afterEveryThing>
+
+        <afterEveryPageTurn>
+        </afterEveryPageTurn>
+
+        <afterEveryParagraphShown>
+        </afterEveryParagraphShown>
+
+        <!-- Novel -->
+        <title>Fallen</title>
+
+        <!-- Objects -->
+
+
+        <!-- Pages -->
+
+</div>
+    <div id="wrapper">
+        <div id="title"></div>
+
+        <div id="inventoryHostWrapper">
+            <h2>Inventory</h2>
+            <div id="inventoryHost"></div>
+        </div>
+
+        <div id="host"></div>
+    </div>
+
+    <div id="interactionHost"></div>
+
+    <div id="undoStageHost"></div>
+
+    <div id="footer">
+        <a id="undoHost" href="#">Undo</a> &bull; <a id="saveHost" href="#">Save</a> &bull; <a id="restoreHost" href="#">Restore</a> &bull; <a id="reseteHost" href="#">Reset</a>
+    </div>
+
+    <script>
+        $(function () {
+            new DedalusWeb({
+                domSource         : $('#story'),
+                domTarget         : $('#host'),
+                titleTarget       : $('#title'),
+                inventoryTarget   : $('#inventoryHost'),
+                interactionTarget : $('#interactionHost'),
+                undoTarget        : $('#undoHost'),
+                undoStageTarget   : $('#undoStageHost'),
+                saveTarget        : $('#saveHost'),
+                restoreTarget     : $('#restoreHost'),
+                resetTarget       : $('#reseteHost'),
+            });
+        });
+
+    </script>
+</body>
+</html>
