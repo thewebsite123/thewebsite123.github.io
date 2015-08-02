@@ -3,3 +3,6 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /images/
 Disallow: /README.md/
+Disallow: /fonts/
+Disallow: /.gitignore/
+Disallow: /.git/
