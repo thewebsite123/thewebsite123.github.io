@@ -2,6 +2,23 @@
 <!-- Template by quackit.com -->
 <html>
 	<head>
+		<meta charset="utf-8">
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+		    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		  <!--[if lt IE 9]>
+		    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		  <![endif]-->
+
+		<script src="/js/jquery.min.js"></script>
+
+		 <script src="/js/bootstrap.min.js"></script>
+
 	   <script src="/js/ads.js"></script>
 		<link rel="icon" type="image/vnd.microsoft.icon" href=/images/favicon.ico>
 		<script>
@@ -20,11 +37,12 @@
 		</script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>MTG Calculator</title>
- 	   <link href=/css/Test.css rel="stylesheet">
+ 	   <link href=/css/main.css rel="stylesheet">
 
 	</head>
 
 	<body>
+		<div class="container-fluid">
 
 		<header>
 			<div class="innertube">
@@ -35,7 +53,6 @@
 				<li><a href='/Articles'>Articles</a></li>
 				<li><a href='/Other'>Other</a></li>
 				</ul>
-				<link href="/css/Style.css" rel="stylesheet">
 			</div>
 		</header>
 
@@ -104,8 +121,8 @@
 			<nav>
 				<div class="innertube">
 <script type="text/javascript" src="//www3.yourshoutbox.com/shoutbox/start.php?key=347501168"></script>
-<a href="http://freedoge.co.in/?r=137624"><img src="/images/dogecoin.png" alt="Mountain View"><a>
-<a href="http://www.000webhost.com/" onClick="this.href='http://www.000webhost.com/842882.html'" target="_blank"><img src=/images/webhost.png alt="Web Hosting"/></a>
+<a href="http://freedoge.co.in/?r=137624"><img class="img-responsive" src="/images/dogecoin.png" alt="Mountain View"><a>
+<a href="http://www.000webhost.com/" onClick="this.href='http://www.000webhost.com/842882.html'" target="_blank"><img class="img-responsive" src=/images/webhost.png alt="Web Hosting"/></a>
 				</div>
 			</nav>
 
@@ -125,64 +142,6 @@
 
 			</div>
 		</footer>
-
+</div>
 	</body>
 </html>
-=======
-<html>
-<body>
-
-<input type="checkbox" id="Question1" value="Question1"> Do you enjoy card games?<br>
-<input type="checkbox" id="Question2" value="Question2"> Do you have too much money/time?<br>
-<input type="checkbox" id="Question3" value="Question3"> Do you enjoy people picking up your expensive cards and going "Woo, shiny!"<br>
-<input type="checkbox" id="Question4" value="Question4"> Do you like building decks that can reach ridiculious levels of awesome?<br>
-<input type="checkbox" id="Question5" value="Question5"> Do you like seeing your totally awesome decks get crushed before your eyes?<br>
-<input type="checkbox" id="Question6" value="Question6"> Do you like games with a skill curve so steep that it does a loop-de-loop?<br>
-<input type="button" onclick="CalculateCanIMTG ()" value="Calculate" />
-<br>
-<input type="button" onclick="ResetCanIMTG ()" value="Reset" /> Press this after clicking Calculate because everything breaks if you don't.<br><br>The number that just popped up is your MTG number. Check the chart below for more info. <br>
-
-Below 10? Nope! <br>
-10-15 If you really want to, you should buy a cheap deck and give it a try.<br>
-16-20 I would reccomend you start playing it, if you're interested.
-21-24 Yup, you should start playing MTG!<br>
-
-<script type="text/javascript">
-var CanIMTG = 0
-
-function CalculateCanIMTG() {
-    {
-    if (document.getElementById("Question1").checked == true)
-        CanIMTG = CanIMTG + 5
-    }
-    {
-    if (document.getElementById("Question2").checked == true)
-        CanIMTG = CanIMTG + 4
-    }
-    {
-    if (document.getElementById("Question3").checked == true)
-        CanIMTG = CanIMTG + 3
-    }
-    {
-    if (document.getElementById("Question4").checked == true)
-        CanIMTG = CanIMTG + 5
-    }
-    {
-    if (document.getElementById("Question5").checked == true)
-        CanIMTG = CanIMTG + 3
-    }
-    {
-    if (document.getElementById("Question6").checked == true)
-        CanIMTG = CanIMTG + 4
-    }
-    {
-    alert (CanIMTG)
-    }
-}
-function ResetCanIMTG () {
-CanIMTG = 0
-}
-</script>
-</body>
-</html>
->>>>>>> origin/master
