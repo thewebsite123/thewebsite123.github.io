@@ -21,6 +21,13 @@ ul#menu li a:hover {
     background-color: #84c754;
 }
 
+.active {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E6E6E6;
+  background-color: #E6E6E6;
+}
+
 body {
   margin:0;
   padding:0;
