@@ -1,0 +1,44 @@
+.NotificationsDropdown {
+  .Dropdown-menu {
+    padding: 0;
+    overflow: hidden;
+
+    .NotificationList-content {
+      max-height: 70vh;
+      overflow: auto;
+      padding-bottom: 10px;
+    }
+  }
+  & .Dropdown-toggle .Button-label {
+    margin-left: 10px;
+  }
+}
+@media @tablet-up {
+  .NotificationsDropdown {
+    .Dropdown-menu {
+      width: 425px;
+    }
+    .Dropdown-toggle {
+      .Button--icon();
+    }
+  }
+}
+
+.NotificationsDropdown-button.unread .Button-icon {
+  display: inline-block;
+  border-radius: 12px;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  padding: 2px 0;
+  font-weight: bold;
+  margin: -2px 0;
+  background: @primary-color;
+  color: @body-bg;
+  font-size: 13px;
+  vertical-align: 0;
+
+  & when (@config-colored-header = true) {
+    background: #fff;
+  }
+}
