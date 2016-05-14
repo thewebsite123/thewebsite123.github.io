@@ -10,7 +10,7 @@ function nextday() {
 	days = days + 1;
 	document.getElementById("days").innerHTML = days;
 
-	if (BadOrGood == "good") {
+	if (BadOrGood() == "good") {
 		 money = money + potIn * 2;
 		 money = money + potOut * 5;
 
