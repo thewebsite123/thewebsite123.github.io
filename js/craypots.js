@@ -10,7 +10,7 @@ function nextday() {
 	days = days + 1;
 	document.getElementById("days").innerHTML = days;
 
-	if (BadOrGood === "good") {
+	if (BadOrGood == "good") {
 		 money = money + potIn * 2;
 		 money = money + potOut * 5;
 
@@ -32,10 +32,10 @@ function nextday() {
 
 function BadOrGood() {
 	var w =(Math.round(Math.random()*5))+1 ;
-	if (w === 1 || w === 2 || w === 3) {
+	if (w == 1 || w == 2 || w == 3) {
 		last = "good";
 		return "good";
-	} else if (w === 5 || w === 6) {
+	} else if (w == 5 || w == 6) {
 		last = "bad";
 		return "bad";
 
@@ -87,7 +87,7 @@ function sellboat() {
 }
 
 function putpotin() {
-	if (potIn + potOut !== pots) {
+	if (potIn + potOut != pots) {
 		potIn = potIn + 1;
 		document.getElementById("potIn").innerHTML = potIn;
 
@@ -95,7 +95,7 @@ function putpotin() {
 }
 
 function putpotout() {
-	if (potIn + potOut !== pots) {
+	if (potIn + potOut != pots) {
 		potOut = potOut + 1;
 		document.getElementById("potOut").innerHTML = potOut;
 
@@ -104,7 +104,7 @@ function putpotout() {
 
 
 function takepotin() {
-	if (potIn + potOut !== 0) {
+	if (potIn + potOut != 0) {
 		potIn = potIn - 1;
 		document.getElementById("potIn").innerHTML = potIn;
 
@@ -112,7 +112,7 @@ function takepotin() {
 }
 
 function takepotout() {
-	if (potIn + potOut !== 0) {
+	if (potIn + potOut != 0) {
 		potOut = potOut - 1;
 		document.getElementById("potOut").innerHTML = potOut;
 
